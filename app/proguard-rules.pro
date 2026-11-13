@@ -1,0 +1,2 @@
+# 本プロジェクトはリフレクションやシリアライズのフレームワークを使わないため、既定のルールのままでよい。
+-keepattributes SourceFile,LineNumberTable

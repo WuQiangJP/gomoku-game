@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      本アプリは権限を一切要求しない：
+      1) 外部ストレージの読み書きは行わず、対局データはアプリ専用ディレクトリ
+         (/data/data/<package>/) にのみ保存する。アンインストール時に OS が
+         ディレクトリごと削除するため、ファイルは残らない。
+      2) クラウドバックアップと端末間データ移行を無効化し、アンインストール後も
+         バックアップにデータが残らないようにする。
+    -->
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GoGame">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode|density|fontScale"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.GoGame">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
