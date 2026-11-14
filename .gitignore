@@ -13,3 +13,6 @@ local.properties
 *.apk
 *.aab
 *.keystore
+
+# リリース署名の認証情報（絶対にコミットしない）
+keystore.properties
